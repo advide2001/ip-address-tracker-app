@@ -13,7 +13,140 @@
 </head>
 
 <body>
+  <article class="card-article">
+    <div class="card">
+      <div class="card__sidebar">
+        <div class="numbered-steps">
+          <div class="numbered-step">
+            <div class="numbered-step__number">1</div>
+            <div class="numbered-step__title">
+              <span>STEP 3</span>
+              <span>YOUR INFO</span>
+            </div>
+          </div>
+          <div class="numbered-step">
+            <div class="numbered-step__number">2</div>
+            <div class="numbered-step__title">
+              <span>STEP 3</span>
+              <span>SELECT PLAN</span>
+            </div>
+          </div>
+          <div class="numbered-step">
+            <div class="numbered-step__number">3</div>
+            <div class="numbered-step__title">
+              <span>STEP 3</span>
+              <span>ADD-ONS</span>
+            </div>
+          </div>
+          <div class="numbered-step">
+            <div class="numbered-step__number">4</div>
+            <div class="numbered-step__title">
+              <span>STEP 4</span>
+              <span>SUMMARY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card__main">
+        <form class="form">
+          <div class="form__page1">
+            <h1>Personal information</h1>
+            <p>Please provide your name, email address, and phone number.</p>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Jon Snow">
 
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="e.g. jonsnow@nightswatch.com">
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g. +1 435 132 987">
+          </div>
+          <div class="form__page2">
+
+            <h1>Select your plan</h1>
+            <p>You have the option of monthly or yearly biling</p>
+
+            <div class="plans">
+              <div class="plan">
+                <div class="plan__icon">
+                  <img src="assets/images/icon-arcade.svg" alt="Arcade-Icon">
+                </div>
+                <div class="plan__details">
+                  <div class="plan__title">Arcade</div>
+                  <div class="plan__pricing">$9/mo</div>
+                </div>
+              </div>
+              <div class="plan">
+                <div class="plan__icon">
+                  <img src="assets/images/icon-advanced.svg" alt="Advanced-Icon">
+                </div>
+                <div class="plan__details">
+                  <div class="plan__title">Advanced</div>
+                  <div class="plan__pricing">$12/mo</div>
+                </div>
+              </div>
+              <div class="plan">
+                <div class="plan__icon">
+                  <img src="assets/images/icon-pro.svg" alt="Pro-Icon">
+                </div>
+                <div class="plan__details">
+                  <div class="plan__title">Pro</div>
+                  <div class="plan__pricing">$15/mo</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="toggle-switch">
+              <span>Monthly</span>
+              <label class="switch">
+                <input type="checkbox" id="toggle-switch">
+                <span class="slider round"></span>
+              </label>
+              <span>Yearly</span>
+            </div>
+          </div>
+          <div class="form__page3">
+            <h1>Pick add-ons</h1>
+            <p>Add-ons help enhance your gaming experience</p>
+
+            <div class="addons">
+              <div class="addon">
+                <input type="checkbox" name="checkbox">
+                <div class="addon__details">
+                  <div class="addon__title">Online service</div>
+                  <div class="addon_info">Access to multiplayer games</div>
+                </div>
+                <div class="addon__pricing">+$1/mo</div>
+              </div>
+            </div>
+            <div class="addon">
+              <input type="checkbox" name="checkbox">
+              <div class="addon__details">
+                <div class="addon__title">Larger storage</div>
+                <div class="addon_info">Extra 1TB of cloud save</div>
+              </div>
+              <div class="addon__pricing">+$2/mo</div>
+            </div>
+          </div>
+          <div class="addon">
+            <input type="checkbox" name="checkbox">
+            <div class="addon__details">
+              <div class="addon__title">Customizable profile</div>
+              <div class="addon_info">Custom theme on your profile</div>
+            </div>
+            <div class="addon__pricing">+$2/mo</div>
+          </div>
+      </div>
+    </div>
+    <div class="form__page4">
+      <h1>Finishing up</h1>
+      <p>Double check everything looks OK before confirming</p>
+      <!-- Inject html from js -->
+    </div>
+    </form>
+    </div>
+    </div>
+  </article>
 </body>
 
 </html>
