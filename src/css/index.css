@@ -62,18 +62,140 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* Center the card */
-article {
+/* CSS varibles */
+:root {
+  /*  COLORS */
+  /* PRIMARY and SECONDARY COLORS */
+  --clr-primary-900: hsl(213, 96%, 18%);
+  --clr-primary-700: hsl(243, 100%, 62%);
+  --clr-primary-300: hsl(228, 100%, 84%);
+  --clr-primary-100: hsl(206, 94%, 87%);
+  --clr-secondary-900: hsl(354, 84%, 57%);
+  /* NEUTRAL COLORS */
+  --clr-neutral-900: hsl(231, 11%, 63%);
+  --clr-neutral-700: hsl(229, 24%, 87%);
+  --clr-neutral-500: hsl(217, 100%, 97%);
+  --clr-neutral-300: hsl(231, 100%, 99%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  /* FONTS */
+  --ff-primary: "Ubuntu", sans-serif;
+
+  /* FONT WEIGHTS */
+  --fw-small: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+}
+
+/* Utility classes */
+.flex-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* To hide elements,  */
+.hidden {
+  display: none;
+}
+
+/* For centering stuff on the page */
+.flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* DEFAULTS */
+body {
+  background-color: var(--clr-neutral-500);
+  font-family: var(--ff-primary);
+  font-size: 0.875rem;
+  font-weight: var(--fw-regular);
+}
+
+/* Center the card */
+.article-card {
+  height: 100vh;
+}
+
 .card {
-  background-color: aqua;
+  background-color: var(--clr-neutral-100);
+  border-radius: 0.5rem;
+}
+
+.card__sidebar {
+  margin: 0.5rem;
+  background-image: url("../../assets/images/bg-sidebar-desktop.svg");
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  height: 100%;
 }
 
 /* CSS to make toggle-switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* CSS for toggle switch */
 .switch {
   position: relative;
   display: inline-block;
