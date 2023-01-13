@@ -52,14 +52,25 @@
           <div class="form__page1">
             <h1>Personal information</h1>
             <p>Please provide your name, email address, and phone number.</p>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="e.g. Jon Snow">
+            <div class="textbox">
+              <label class="textbox__label" for="name">Name</label>
+              <input class="textbox__field" type="text" id="name" name="name" placeholder="e.g. Jon Snow">
+            </div>
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="e.g. jonsnow@nightswatch.com">
+            <div class="textbox">
+              <label class="textbox__label" for="email">Email Address</label>
+              <input class="textbox__field" type="email" id="email" name="email"
+                placeholder="e.g. jonsnow@nightswatch.com">
+            </div>
 
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="e.g. +1 435 132 987">
+            <div class="textbox">
+              <label class="textbox__label" for="phone">Phone Number</label>
+              <input class="textbox__field" type="tel" id="phone" name="phone" placeholder="e.g. +1 435 132 987">
+            </div>
+
+            <div class="buttons-group">
+              <a href="">Next Step</a>
+            </div>
           </div>
           <div class="form__page2">
 
@@ -73,7 +84,8 @@
                 </div>
                 <div class="plan__details">
                   <div class="plan__title">Arcade</div>
-                  <div class="plan__pricing">$9/mo</div>
+                  <div class="plan__pricing">$90/mo</div>
+                  <div class="plan__savings">2 months free</div>
                 </div>
               </div>
               <div class="plan">
@@ -82,7 +94,8 @@
                 </div>
                 <div class="plan__details">
                   <div class="plan__title">Advanced</div>
-                  <div class="plan__pricing">$12/mo</div>
+                  <div class="plan__pricing">$120/mo</div>
+                  <div class="plan__savings">2 months free</div>
                 </div>
               </div>
               <div class="plan">
@@ -92,6 +105,7 @@
                 <div class="plan__details">
                   <div class="plan__title">Pro</div>
                   <div class="plan__pricing">$15/mo</div>
+                  <div class="plan__savings">2 months free</div>
                 </div>
               </div>
             </div>
@@ -139,6 +153,30 @@
           <div class="form__page4">
             <h1>Summary</h1>
             <p>Double check everythingis OK and confirm your plan</p>
+
+            <div class="summary">
+              <div class="summay__plan">
+                <div class="summay__plan__title">
+                  <p>Arcade (Yearly)</p>
+                  <a class="chenge-link" href="">Change</a>
+                </div>
+                <div class="summay__plan__pricing">$90/mo</div>
+              </div>
+              <div class="summay__addons">
+                <div class="summary_addon">
+                  <div class="summay__addons__title">Online service</div>
+                  <div class="summay__addons__pricing">+$1/mo</div>
+                </div>
+                <div class="summary_addon">
+                  <div class="summay__addons__title">Larger storage</div>
+                  <div class="summay__addons__pricing">+$1/mo</div>
+                </div>
+              </div>
+              <div class="summary__total">
+                <div class="summary__total__title">Total(per year)</div>
+                <div class="summary__total__cost">$90/mo</div>
+              </div>
+            </div>
           </div>
         </form>
       </div>
