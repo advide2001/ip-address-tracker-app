@@ -91,7 +91,6 @@ h6 {
 .flex-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
 }
 
 /* To hide elements,  */
@@ -106,12 +105,49 @@ h6 {
   justify-content: center;
 }
 
+/* For styling buttons */
+.buttons-group {
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+.buttons-group-page1 {
+  flex-direction: row-reverse;
+}
+
+.button,
+.button:visited,
+.button:link {
+  text-decoration: none;
+}
+
+.button-back {
+  color: var(--clr-neutral-900);
+}
+
+.button-back:hover,
+.button-back:focus {
+  color: var(--clr-primary-900);
+}
+
+.button-next {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-900);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.button-next:hover,
+.button-next:focus {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-700);
+}
+
 /* DEFAULTS */
 body {
-  background-color: var(--clr-neutral-500);
+  background-color: var(--clr-neutral-700);
   font-family: var(--ff-primary);
   font-size: 0.875rem;
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-medium);
 }
 
 /* Center the card */
@@ -122,18 +158,112 @@ body {
 .card {
   background-color: var(--clr-neutral-100);
   border-radius: 0.5rem;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.1);
 }
+
+/* Styling the sidebar of the card */
 
 .card__sidebar {
   margin: 0.5rem;
   background-image: url("../../assets/images/bg-sidebar-desktop.svg");
-  background-size: cover;
-  background-position: center;
+  background-size: 100% 100%;
   padding: 1rem;
   border-radius: 0.5rem;
-  height: 100%;
 }
 
+.numbered-steps {
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-regular);
+  padding: 1rem 3.5rem 1rem 1rem;
+}
+
+.numbered-step {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.numbered-step__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+  border: 1px solid var(--clr-neutral-100);
+  border-radius: 50%;
+  font-weight: var(--fw-medium);
+}
+
+.numbered-step__number--active {
+  border: none;
+  background-color: var(--clr-primary-300);
+  color: var(--clr-primary-900);
+}
+
+.numbered-step__step {
+  color: var(--clr-neutral-700);
+  font-size: 0.65rem;
+  font-weight: var(--fw-small);
+}
+
+.numbered-step__title {
+  font-size: 0.8rem;
+  font-weight: var(--fw-medium);
+}
+
+/* Styling the main content of card on page 1 */
+.card__main {
+  margin: 1rem 3rem;
+  padding: 0.5rem;
+}
+
+.form__page > h1 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-900);
+  margin-bottom: 0.25rem;
+}
+
+.form__page > p {
+  font-size: 0.875rem;
+  font-weight: var(--fw-medium);
+  color: var(--clr-neutral-900);
+  margin-bottom: 0.25rem;
+}
+
+.textbox {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+}
+
+.textbox__label {
+  font-size: 0.875rem;
+  font-weight: var(--fw-small);
+  color: var(--clr-primary-900);
+  margin-bottom: 0.35rem;
+}
+
+.textbox__field {
+  border: 1px solid var(--clr-neutral-700);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: var(--fw-medium);
+  color: var(--clr-primary-900);
+}
+
+.textbox__field:focus {
+  outline: none;
+  border: 1px solid var(--clr-primary-900);
+}
+
+.textbox__error {
+  color: var(--clr-secondary-900);
+  font-size: 0.75rem;
+  font-weight: var(--fw-small);
+}
 /* CSS to make toggle-switch */
 .switch {
   position: relative;

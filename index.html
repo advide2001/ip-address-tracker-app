@@ -20,44 +20,45 @@
     <div class="card flex-group">
       <div class="card__sidebar">
         <div class="numbered-steps">
-          <div class="numbered-step">
-            <div class="numbered-step__number">1</div>
-            <div class="numbered-step__title">
-              <span>STEP 3</span>
-              <span>YOUR INFO</span>
+          <div class="numbered-step flex-group">
+            <div class="numbered-step__number numbered-step__number--active">1</div>
+            <div>
+              <p class="numbered-step__step">STEP 1</p>
+              <p class="numbered-step__title">YOUR INFO</p>
             </div>
           </div>
-          <div class="numbered-step">
+          <div class="numbered-step flex-group">
             <div class="numbered-step__number">2</div>
-            <div class="numbered-step__title">
-              <span>STEP 3</span>
-              <span>SELECT PLAN</span>
+            <div>
+              <p class="numbered-step__step">STEP 2</p>
+              <p class="numbered-step__title">SELECT PLAN</p>
             </div>
           </div>
-          <div class="numbered-step">
-            <div class="numbered-step__number">3</div>
-            <div class="numbered-step__title">
-              <span>STEP 3</span>
-              <span>ADD-ONS</span>
+          <div class="numbered-step flex-group">
+            <div class="numbered-step__number ">3</div>
+            <div>
+              <p class="numbered-step__step">STEP 3</p>
+              <p class="numbered-step__title">ADD-ONS</p>
             </div>
           </div>
-          <div class="numbered-step">
+          <div class="numbered-step flex-group">
             <div class="numbered-step__number">4</div>
-            <div class="numbered-step__title">
-              <span>STEP 4</span>
-              <span>SUMMARY</span>
+            <div>
+              <p class="numbered-step__step">STEP 4</p>
+              <p class="numbered-step__title">SUMMARY</p>
             </div>
           </div>
         </div>
       </div>
       <div class="card__main">
         <form class="form">
-          <div class="form__page1">
+          <div class="form__page form__page1">
             <h1>Personal information</h1>
             <p>Please provide your name, email address, and phone number.</p>
             <div class="textbox">
               <label class="textbox__label" for="name">Name</label>
               <input class="textbox__field" type="text" id="name" name="name" placeholder="e.g. Jon Snow">
+
             </div>
 
             <div class="textbox">
@@ -69,13 +70,15 @@
             <div class="textbox">
               <label class="textbox__label" for="phone">Phone Number</label>
               <input class="textbox__field" type="tel" id="phone" name="phone" placeholder="e.g. +1 435 132 987">
+              <!-- <p class="textbox__error">This field is required</p> -->
             </div>
 
-            <div class="buttons-group">
-              <a href="">Next Step</a>
+            <div class="buttons-group buttons-group-page1 flex-group">
+              <a href="" class="button button-back hidden">Go Back</a>
+              <a href="" class="button button-next">Next Step</a>
             </div>
           </div>
-          <div class="form__page2 hidden">
+          <div class="form__page form__page2 hidden">
 
             <h1>Select your plan</h1>
             <p>You have the option of monthly or yearly biling</p>
@@ -122,7 +125,7 @@
               <span>Yearly</span>
             </div>
           </div>
-          <div class="form__page3 hidden">
+          <div class="form__page form__page3 hidden">
             <h1>Pick add-ons</h1>
             <p>Add-ons help enhance your gaming experience</p>
 
@@ -153,7 +156,7 @@
               </div>
             </div>
           </div>
-          <div class="form__page4 hidden">
+          <div class="form__page form__page4 hidden">
             <h1>Summary</h1>
             <p>Double check everythingis OK and confirm your plan</p>
 
