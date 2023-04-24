@@ -16,6 +16,11 @@
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-query": "^3.39.3",
     "tailwindcss": "3.3.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.2.7"
   }
 }
