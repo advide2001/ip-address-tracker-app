@@ -6,7 +6,12 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "hero-mobileBg": "url('/images/pattern-bg-mobile.png')",
+        "hero-desktopBg": "url('/images/pattern-bg-desktop.png')",
+      },
+    },
   },
   plugins: [],
 };

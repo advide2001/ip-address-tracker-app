@@ -1,7 +1,9 @@
+import React from "react";
+
 export default function Home() {
   return (
-    <div>
-      <h1>My Homepage</h1>
-    </div>
+    <React.Fragment>
+      <div className="h-[35vh] bg-cover bg-center bg-no-repeat w-full bg-hero-mobileBg"></div>
+    </React.Fragment>
   );
 }
