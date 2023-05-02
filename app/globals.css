@@ -109,5 +109,12 @@ ol[class] {
 
 /* Leaflet map container sizing */
 .leaflet-container {
-  height: 75vh;
+  height: 65vh;
+  z-index: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .leaflet-container {
+    height: 75vh;
+  }
 }
