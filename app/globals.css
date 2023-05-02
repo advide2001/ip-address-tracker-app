@@ -106,3 +106,8 @@ ol[class] {
 * {
   scroll-behavior: smooth;
 }
+
+/* Leaflet map container sizing */
+.leaflet-container {
+  height: 75vh;
+}
