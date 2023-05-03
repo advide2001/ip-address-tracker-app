@@ -10,9 +10,10 @@ const SearchBar = () => {
       <input
         type="text"
         id="ipAddress"
-        maxLength="15"
+        size={12}
+        maxLength={15}
         placeholder="Search..."
-        className="focus mx-2 flex-1 pl-2 text-xl focus:outline-none"
+        className="flex-1 pl-3 text-xl focus:outline-none"
       />
       <button type="submit" className="bg-black p-4">
         <ChevronRightIcon className="h-5 w-5 text-white" />
