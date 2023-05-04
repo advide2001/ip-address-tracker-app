@@ -3,7 +3,7 @@ import { ChevronRightIcon } from "@heroicons/react/24/solid";
 
 const SearchBar = () => {
   return (
-    <div className="flex w-[90%] overflow-hidden rounded-xl bg-white lg:w-[768px]">
+    <div className="mx-auto flex w-[90%] overflow-hidden rounded-xl bg-white lg:w-[768px]">
       <label htmlFor="ipAddress" className="sr-only">
         Search for IP address
       </label>
