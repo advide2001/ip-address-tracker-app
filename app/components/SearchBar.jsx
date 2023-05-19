@@ -1,8 +1,10 @@
 "use client";
 
 import React from "react";
+import { useQuery } from "@tanstack/react-query";
 import { ChevronRightIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
+import fetchIPData from "../util/getIPAddressDetails";
 
 function validateIPAddress(ipAddress) {
   // Regular expression pattern for IP address validation
@@ -14,7 +16,7 @@ function validateIPAddress(ipAddress) {
   else return false;
 }
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   // logic
   const [ipAddress, setIpAddress] = useState("");
   const [isValidIP, setIsValidIP] = useState(true);
@@ -23,12 +25,19 @@ const SearchBar = () => {
     setIpAddress(e.target.value);
   };
 
+  const { data } = useQuery({
+    queryKey: ["ipAddressDetails", ipAddress],
+    queryFn: () => fetchIPData(ipAddress),
+    initialData: props.initialData,
+  });
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateIPAddress(ipAddress)) {
       setIsValidIP(true);
       setIpAddress("");
-      // TODO: fetch data
+
+      console.log(data);
     } else setIsValidIP(false);
   };
 
