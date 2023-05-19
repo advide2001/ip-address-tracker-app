@@ -4,10 +4,20 @@ import React from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 
+function validateIPAddress(ipAddress) {
+  // Regular expression pattern for IP address validation
+  const ipAddressPattern = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/;
+
+  // IP address is valid
+  if (ipAddressPattern.test(ipAddress)) return true;
+  // IP address is invalid
+  else return false;
+}
+
 const SearchBar = () => {
   // logic
   const [ipAddress, setIpAddress] = useState("");
-  const [isValidIP, setIsValidIP] = useState(false);
+  const [isValidIP, setIsValidIP] = useState(true);
 
   const handleInputChange = (e) => {
     setIpAddress(e.target.value);
@@ -15,8 +25,11 @@ const SearchBar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(ipAddress);
-    setIpAddress("");
+    if (validateIPAddress(ipAddress)) {
+      setIsValidIP(true);
+      setIpAddress("");
+      // TODO: fetch data
+    } else setIsValidIP(false);
   };
 
   // render output
@@ -40,8 +53,8 @@ const SearchBar = () => {
           <ChevronRightIcon className="h-5 w-5 text-white" />
         </button>
       </div>
-      {isValidIP && (
-        <p className="mx-auto flex w-[90%] text-lg text-red-600 lg:w-[768px]">
+      {!isValidIP && (
+        <p className="mx-auto flex w-[90%] text-lg text-yellow-300 lg:w-[768px]">
           * Enter a valid IP address
         </p>
       )}
